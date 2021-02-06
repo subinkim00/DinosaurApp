@@ -42,13 +42,11 @@
         android:onClick="setAlarm" />
 
 
-
     <TextView
         android:id="@+id/timeDisplay"
         android:text="00:00"
-        android:textSize="20sp"
+        android:textSize="10sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

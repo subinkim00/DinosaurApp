@@ -27,4 +27,11 @@
         android:layout_gravity="center"
         android:onClick="toDiffPage" />
 
+    <TextView
+        android:id="@+id/textDisplay"
+        android:text="hi"
+        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

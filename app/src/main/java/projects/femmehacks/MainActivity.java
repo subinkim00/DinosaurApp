@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 CharSequence time = data.getCharSequenceExtra("time");
                 TextView textView = findViewById(R.id.timeDisplay);
                 textView.setText(time);
-
-
+                String text = data.getStringExtra("text");
+                TextView textView2 = findViewById(R.id.textDisplay);
+                textView2.setText(text);
             }
             if (resultCode == AlarmActivity.RESULT_CANCELED) {
                 //Write your code if there's no result

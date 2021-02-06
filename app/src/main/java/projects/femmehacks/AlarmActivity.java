@@ -9,11 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.SeekBar;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 import android.widget.TimePicker;
 
 
@@ -51,6 +49,7 @@ public class AlarmActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String item = spinner.getItemAtPosition(position).toString();
             }
 
             @Override
@@ -58,14 +57,20 @@ public class AlarmActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public void setAlarm(View view) {
+        Spinner spinner = findViewById(R.id.goal_spinner);
+        String text = spinner.getSelectedItem().toString();
+        EditText txtname = findViewById(R.id.goal1);
+        String goal =  txtname.getText().toString();
+        text = text + ": " + goal;
         TextView textView = findViewById(R.id.timeDisplay);
         CharSequence date = textView.getText();
+
         Intent returnIntent = new Intent();
         returnIntent.putExtra("time", date);
+        returnIntent.putExtra("text", text);
         setResult(AlarmActivity.RESULT_OK,returnIntent);
         finish();
     }
