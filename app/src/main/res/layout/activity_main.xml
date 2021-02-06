@@ -7,21 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <Button
-        android:id="@+id/textOutput"
-        android:text="Update Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="changeText" />
-    -->
     <!-- Display the alarm time -->
     <TextView
+        android:id="@+id/timeDisplay"
         android:text="00:00"
         android:textSize="100sp"
         android:layout_width="wrap_content"

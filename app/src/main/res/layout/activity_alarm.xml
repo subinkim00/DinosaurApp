@@ -8,57 +8,9 @@
     tools:context=".AlarmActivity">
 
     <TimePicker
-        android:id="@+id/timePicker1"
+        android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-    <!--
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" >
-        <TextView
-            android:id="@+id/hour"
-            android:text="00"
-            android:textSize="100sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:text=":"
-            android:textSize="100sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:id="@+id/minute"
-            android:text="00"
-            android:textSize="100sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-    </LinearLayout>
-
-    <SeekBar
-        android:id="@+id/hourSlider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:max="12"
-        android:progress="0" />
-
-    <SeekBar
-        android:id="@+id/minuteSlider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:max="60"
-        android:progress="0" />
-
-        -->
 
     <LinearLayout
         android:orientation="horizontal"
@@ -89,5 +41,14 @@
         android:layout_gravity="center"
         android:onClick="setAlarm" />
 
+
+
+    <TextView
+        android:id="@+id/timeDisplay"
+        android:text="00:00"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </LinearLayout>
