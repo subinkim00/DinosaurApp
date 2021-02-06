@@ -1,5 +1,5 @@
 package projects.femmehacks;
-
+//
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,6 +22,7 @@ public class AlarmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
 
+        /*
         SeekBar hourBar= findViewById(R.id.hourSlider);
         // perform seek bar change listener event used for getting the progress value
         hourBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -72,6 +73,8 @@ public class AlarmActivity extends AppCompatActivity {
             }
         });
 
+
+         */
         Spinner spinner = (Spinner) findViewById(R.id.goal_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
