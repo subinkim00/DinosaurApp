@@ -31,7 +31,16 @@ public class AlarmActivity extends AppCompatActivity {
         timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute){
-                String date = hourOfDay + ":" + minute;
+                String date;
+                if (hourOfDay < 10 & minute < 10) {
+                    date = "0" + hourOfDay + ":" + "0" + minute;
+                } else if (hourOfDay < 10) {
+                    date = "0" + hourOfDay + ":" + minute;
+                } else if (minute < 10) {
+                    date = hourOfDay + ":" + "0" + minute;
+                } else {
+                    date = hourOfDay + ":" + minute;
+                }
                 TextView textView = findViewById(R.id.timeDisplay);
                 textView.setText(date);
             }
@@ -51,7 +60,6 @@ public class AlarmActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String item = spinner.getItemAtPosition(position).toString();
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
@@ -60,14 +68,16 @@ public class AlarmActivity extends AppCompatActivity {
     }
 
     public void setAlarm(View view) {
+        // Calling for the set goals from spinner & EditText Views
         Spinner spinner = findViewById(R.id.goal_spinner);
         String text = spinner.getSelectedItem().toString();
         EditText txtname = findViewById(R.id.goal1);
         String goal =  txtname.getText().toString();
         text = text + ": " + goal;
+        // Calling for the date from clock feature
         TextView textView = findViewById(R.id.timeDisplay);
         CharSequence date = textView.getText();
-
+        // Sending goals & date information back to main
         Intent returnIntent = new Intent();
         returnIntent.putExtra("time", date);
         returnIntent.putExtra("text", text);
