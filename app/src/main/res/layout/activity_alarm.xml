@@ -22,15 +22,16 @@
             android:textSize="100sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             />
 
         <EditText
             android:id="@+id/goal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:hint="Enter your goal #1!"
             android:inputType="text"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Button
@@ -48,5 +49,11 @@
         android:textSize="10sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:src="@drawable/sleeping_dinosaur"/>
 
 </LinearLayout>

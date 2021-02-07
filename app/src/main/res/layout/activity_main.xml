@@ -7,6 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/moon" />
+
     <!-- Display the alarm time -->
     <TextView
         android:id="@+id/timeDisplay"
@@ -33,5 +40,24 @@
         android:textSize="10sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/medium_dinosaur_3"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/speak_heart"/>
+
+    </LinearLayout>
 
 </LinearLayout>
