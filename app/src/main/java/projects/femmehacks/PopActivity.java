@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PopActivity extends AppCompatActivity implements View.OnClickListener {
@@ -16,10 +17,14 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
     private int goalRow = (int)(Math.random() * 5);
     private int goalCol = (int)(Math.random() * 5);
 
+    private String goalTxt; // Stores the goals text from Alarm
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.goalTxt = intent.getStringExtra("text"); //Gets the goals text from Alarm
 
         for (int i = 0; i < bubbles.length; i++) {
             for (int j = 0; j < bubbles[i].length; j++) {
@@ -36,10 +41,14 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (v.equals(goalBubble)) {
+
             Intent myIntent = new Intent(v.getContext(), EndActivity.class);
+            myIntent.putExtra("goals", this.goalTxt); // Sends goals to the next activity
             startActivity(myIntent);
         } else {
             v.setEnabled(false);
         }
     }
+
+
 }
