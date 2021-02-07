@@ -1,5 +1,6 @@
 # DinosaurApp
 Created for FemmeHacks 2021 by Katherine Chen, Subin Kim, Rowena Lu
+[![Project Dino](project_dino.png)](https://www.youtube.com/watch?v=3LYCnXbZKdE&feature=emb_title)
 ## Inspiration
 This app was inspired by our lives as students doing remote learning amidst the pandemic. Trapped at home, it has been difficult to motivate ourselves to wake up for classes. We hit the 'snooze' button more frequently in blurred cycles of sleeping, eating, and studying. Studies have shown that waking up happy and feeling motivated helps improve mental health and productivity. Therefore, we wanted to create a cute app that acts as a daily dose of motivation, keeps people on track, and reminds them of their goals.
 
