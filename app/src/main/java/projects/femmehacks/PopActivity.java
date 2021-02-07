@@ -24,7 +24,8 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.goalTxt = intent.getStringExtra("text"); //Gets the goals text from Alarm
+        Bundle goals = getIntent().getExtras(); //Gets the goals text from Alarm
+        goalTxt = goals.getString("goals");
 
         for (int i = 0; i < bubbles.length; i++) {
             for (int j = 0; j < bubbles[i].length; j++) {
@@ -41,7 +42,6 @@ public class PopActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (v.equals(goalBubble)) {
-
             Intent myIntent = new Intent(v.getContext(), EndActivity.class);
             myIntent.putExtra("goals", this.goalTxt); // Sends goals to the next activity
             startActivity(myIntent);

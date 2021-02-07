@@ -11,9 +11,11 @@ public class EndActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
-        String goals = intent.getStringExtra("text");
+        Bundle goals = getIntent().getExtras(); //Gets the goals text from Alarm
+        String goalTxt = goals.getString("goals");
+
         TextView textView = findViewById(R.id.endMessage);
-        textView.setText("Hooray! You are ready for " + goals + "!");
+        textView.setText("Hooray! You are ready for " + goalTxt + "!");
     }
 
 }

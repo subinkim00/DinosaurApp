@@ -34,6 +34,14 @@
         android:layout_gravity="center"
         android:onClick="toDiffPage" />
 
+    <Button
+        android:id="@+id/startPop"
+        android:text="Let's get popping!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="goPop" />
+
     <TextView
         android:id="@+id/textDisplay"
         android:text="hi"
